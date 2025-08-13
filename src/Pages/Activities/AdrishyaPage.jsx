@@ -1,5 +1,8 @@
 // src/components/AdrishyaSection.jsx
 import React from 'react';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 // --- IMAGE & LOGO PLACEHOLDERS ---
 // You must replace these with the actual paths to your images.
@@ -11,8 +14,28 @@ import workshopImage from '../../assets/images/img1.jpg';
 import environmentImage from '../../assets/images/img1.jpg';
 import socialImage from '../../assets/images/img1.jpg';
 
-// --- PLACEHOLDER PHOTOS FOR SCROLLERS ---
-// Replace these with arrays of your actual photo paths.
+
+  const settings = {
+    dots: false, // no dots
+    arrows: false, // no arrows
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3, // number of images per view
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 2 }
+      },
+      {
+        breakpoint: 640,
+        settings: { slidesToShow: 1 }
+      }
+    ]
+  };
+
 const galleryPhotos = [
   'https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=2070',
   'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2070',
@@ -27,6 +50,7 @@ const volunteerPhotos = [
   'https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=1887',
 ];
 
+
 const AdrishyaSection = () => {
   const activitiesData = [
     { title: 'Vidyavarna Painting', description: 'Transformed 75+ government schools and ashramas with vibrant, educational, and value-based wall art that inspires learning and patriotism.', image: vidyavarnaImage },
@@ -40,13 +64,21 @@ const AdrishyaSection = () => {
     <div className="font-sans">
       {/* 1. Photo Scroller */}
       <div className="mb-20">
-        <h2 className="text-3xl font-bold text-gray-800 font-heading text-center mb-8">Our Moments</h2>
-        <div className="flex overflow-x-auto space-x-4 p-4 -m-4">
-          {galleryPhotos.map((photo, index) => (
-            <img key={index} src={photo} alt={`Gallery image ${index + 1}`} className="flex-shrink-0 w-80 h-56 rounded-lg shadow-md object-cover"/>
-          ))}
-        </div>
-      </div>
+      <h2 className="text-3xl font-bold text-gray-800 font-heading text-center mb-8">
+        Our Moments
+      </h2>
+      <Slider {...settings}>
+        {galleryPhotos.map((photo, index) => (
+          <div key={index} className="p-2">
+            <img
+              src={photo}
+              alt={`Gallery image ${index + 1}`}
+              className="w-80 h-56 rounded-lg shadow-md object-cover mx-auto"
+            />
+          </div>
+        ))}
+      </Slider>
+    </div>
 
       {/* 2. Our Journey Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
