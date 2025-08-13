@@ -15,6 +15,7 @@ const UniqueFeaturesSection = () => {
   ];
 
   return (
+    <div>
     <section className="bg-gray-50 py-20 font-sans">
       <div className="container mx-auto px-6">
         {/* Section Header */}
@@ -43,8 +44,10 @@ const UniqueFeaturesSection = () => {
           </p>
         </div> */}
 {/* this is volunteer testimonial */}
-<section class="bg-yellow-400 py-16">
-  <div class="container mx-auto px-4">
+</div>
+    </section>
+<section class=" bg-yellow-400 py-16 w-full">
+  <div class="container mx-auto px-4 ">
     <div class="text-center mb-12">
       <h2 class="text-3xl font-extrabold text-gray-800">Volunteer Experiences</h2>
       <p class="mt-2 text-lg text-gray-600">Hear from those who've been part of our journey</p>
@@ -89,8 +92,8 @@ const UniqueFeaturesSection = () => {
 </section>
 
 
-      </div>
-    </section>
+     
+    </div>
   );
 };
 

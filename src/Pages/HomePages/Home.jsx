@@ -30,11 +30,11 @@ const HomePage = () => {
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <main className="relative z-10 max-w-4xl mx-auto px-4 mt-50">
           <h1 className="text-3xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
-            <span className="block My Custom Font"> Rooted in Tradition. </span>
-              <span>Ready for Tomorrow.</span>
+            <span className="block My Custom Font"> Rooted In Tradition. </span>
+              <span>Ready For Tomorrow.</span>
           </h1>
           <p className="mt-3 mb-20 max-w-md mx-auto text-lg text-white sm:text-2xl md:mt-5 md:max-w-3xl">
-            A Free Residential Gurukulam nurturing holistic growth through value-based education
+            A free residential gurukulam nurturing holistic growth through value-based education
           </p>
           <div className="mt-14 max-w-md mx-auto sm:flex sm:justify-center items-center">
             {/* The play button is now a button that opens the modal */}
