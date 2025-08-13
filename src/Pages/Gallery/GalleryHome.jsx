@@ -1,6 +1,12 @@
 // src/pages/GalleryHome.jsx
 import React, { useState } from 'react';
-
+import vidyavarna from '../../assets/photos/vidhyavarana.png'
+import vidyavarna1 from '../../assets/photos/vidhyavarana1.png'
+import vidyavarna2 from '../../assets/photos/vidhyavarana2.jpg'
+import vidyavarna3 from '../../assets/photos/vidhyavarana3.jpg'
+import vidyavarna5 from '../../assets/photos/vidhyavarana5.jpg'
+import vidyavarna6 from '../../assets/photos/vidhyavarana6.jpg'
+// --- IMAGE PLACEHOLDERS ---
 // --- IMAGE PLACEHOLDERS ---
 // You must replace these with your actual image paths.
 import heroImage from '../../assets/images/img_2.jpg';
@@ -17,12 +23,12 @@ const gurukulamImages = [
 
 // Adrishya Gallery Images (6 images to match the 2x3 grid)
 const adrishyaImages = [
-  'https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=2070',
-  'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2070',
-  'https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070',
-  'https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=1887',
-  'https://images.unsplash.com/photo-1594708422143-7e53f5c355c7?q=80&w=2070',
-  'https://images.unsplash.com/photo-1611095965943-9b5835c61303?q=80&w=2070',
+  vidyavarna,
+  vidyavarna1,
+  vidyavarna3,
+  vidyavarna5,
+  vidyavarna2,
+  vidyavarna6,
 ];
 
 const GalleryPage = () => {
