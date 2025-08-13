@@ -9,24 +9,22 @@ const storyImageUrl = story;
 const StorySection = () => {
   return (
     // UPDATED: Reduced vertical padding (py-12 and sm:py-16) to make the section shorter
-    <section className="bg-yellow-500/80 py-7 sm:py-10">
-      <div className="max-w-5xl mx-auto px-5 lg:px-8">
-        <div className="bg-yellow-500/80 rounded-2xl shadow-2xl overflow-hidden">
-          {/* UPDATED: Added 'items-center' to ensure columns align vertically */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
+    <section className="w-full bg-yellow-500/80 py-15 sm:py-28">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="rounded-2xl shadow-2xl overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 py-10 sm:py-16 px-6 lg:px-8 bg-amber-300">
             
             {/* Left Column: Image */}
-            <div className="relative h-64 lg:h-96">
+            <div className="relative h-72 md:h-96 ">
               <img
                 src={storyImageUrl}
                 alt="A child from the Gurukulam smiling and playing with water"
-                className="absolute inset-0 w-full h-full object-cover rounded-2xl ml-2 mt-3 "
+                className="absolute inset-0 w-full h-full object-cover rounded-2xl"
               />
             </div>
 
-            {/* Right Column: Text Content */}
-            {/* UPDATED: Reduced padding (p-8 and sm:p-12) for a more compact feel */}
-            <div className="p-8 sm:p-12 text-white">
+            {/* Right Column: Text */}
+            <div className="text-white">
               <p className="text-sm font-semibold tracking-wider uppercase text-white/80">
                 Glimpses of Transformation
               </p>
