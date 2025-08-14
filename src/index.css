@@ -1,5 +1,5 @@
 /* src/index.css */
-
+@import 'leaflet/dist/leaflet.css';
 /* 1. Import your chosen Google Font (e.g., Poppins) */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
