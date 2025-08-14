@@ -30,9 +30,9 @@ const recentBlogPosts = [
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-gray-300">
+    <footer className="bg-gray-800 text-gray-300 ">
       <div className="max-w-7xl mx-auto py-16 px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
           
           {/* Column 1: About Us */}
           <div>
@@ -45,25 +45,7 @@ const Footer = () => {
             </Link>
           </div>
 
-          {/* Column 2: Recent Blog */}
-          <div>
-            <h3 className="text-sm font-bold tracking-wider text-white uppercase">Recent Blog</h3>
-            <div className="mt-4 space-y-4">
-              {recentBlogPosts.map((post, index) => (
-                <div key={index} className="flex items-center space-x-4">
-                  <Link to={post.link}>
-                    <img src={post.image} alt={post.title} className="w-16 h-16 object-cover rounded-md" />
-                  </Link>
-                  <div>
-                    <Link to={post.link} className="font-semibold text-white hover:text-yellow-400 transition-colors">
-                      {post.title}
-                    </Link>
-                    <p className="text-xs text-gray-500 mt-1">{post.date}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+        
 
           {/* Column 3: Get Connected */}
           <div>
