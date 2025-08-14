@@ -10,7 +10,7 @@ const HolisticPathSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-11 items-center ">
           
           {/* Image Column */}
-          <div className="flex justify-center md:justify-start" >
+          <div className="flex justify-center md:justify-start h-full" >
             <img 
               src={holisticPathImage} 
               alt="Students engaged in a holistic learning activity" 
