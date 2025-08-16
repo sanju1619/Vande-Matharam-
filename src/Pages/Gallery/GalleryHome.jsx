@@ -1,11 +1,10 @@
-// src/pages/GalleryHome.jsx
 import React, { useState } from 'react';
-import vidyavarna from '../../assets/photos/vidhyavarana.png'
-import vidyavarna1 from '../../assets/photos/vidhyavarana1.png'
-import vidyavarna2 from '../../assets/photos/vidhyavarana2.jpg'
-import vidyavarna3 from '../../assets/photos/vidhyavarana3.jpg'
-import vidyavarna5 from '../../assets/photos/vidhyavarana5.jpg'
-import vidyavarna6 from '../../assets/photos/vidhyavarana6.jpg'
+import vidyavarna from '../../assets/photos/vidhyavarana.png';
+import vidyavarna1 from '../../assets/photos/vidhyavarana1.png';
+import vidyavarna2 from '../../assets/photos/vidhyavarana2.jpg';
+import vidyavarna3 from '../../assets/photos/vidhyavarana3.jpg';
+import vidyavarna5 from '../../assets/photos/vidhyavarana5.jpg';
+import vidyavarna6 from '../../assets/photos/vidhyavarana6.jpg';
 import heroImage from '../../assets/images/img_2.jpg';
 
 // Gurukulam Gallery Images (with date added)
@@ -54,21 +53,21 @@ const GalleryPage = () => {
         style={{ backgroundImage: `url(${heroImage})` }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
-        <main className="relative z-10 max-w-4xl mx-auto px-4 mt-32">
-          <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl font-heading">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 mt-32">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white">
             Our Gallery
           </h1>
-          <p className="mt-3 max-w-md mx-auto text-lg text-gray-200 sm:text-2xl md:mt-5 md:max-w-3xl font-sans">
+          <p className="mt-6 text-lg sm:text-2xl text-gray-200 max-w-3xl mx-auto">
             A glimpse into our world of learning, service, and growth.
           </p>
-        </main>
+        </div>
       </div>
 
-      {/* Toggleable Image Gallery Section */}
-      <section className="bg-gray-50 py-20 font-sans">
-        <div className="container mx-auto px-6">
+      {/* Gallery Section */}
+      <section className="bg-gray-50 py-16 sm:py-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Tab Buttons */}
-          <div className="flex justify-center mb-12">
+          <div className="flex justify-center mb-16">
             <div className="flex p-1 bg-gray-200 rounded-full">
               <button
                 onClick={() => setActiveTab('gurukula')}
@@ -95,7 +94,7 @@ const GalleryPage = () => {
 
           {/* Sort Dropdown (only for Gurukula) */}
           {activeTab === "gurukula" && (
-            <div className="flex justify-end mb-6">
+            <div className="flex justify-end mb-8">
               <select
                 value={sortOrder}
                 onChange={(e) => setSortOrder(e.target.value)}
@@ -108,19 +107,19 @@ const GalleryPage = () => {
           )}
 
           {/* Gallery Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {activeImages.map((image, index) => {
               const imageUrl = activeTab === 'gurukula' ? image.url : image;
               return (
                 <div
                   key={index}
-                  className="relative overflow-hidden rounded-lg shadow-md group cursor-pointer"
+                  className="relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer"
                   onClick={() => openImage(imageUrl)}
                 >
                   <img
                     src={imageUrl}
                     alt={`${activeTab} gallery image ${index + 1}`}
-                    className="w-full h-72 object-cover transform transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-80 object-cover transform transition-transform duration-300 group-hover:scale-110"
                   />
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -148,7 +147,7 @@ const GalleryPage = () => {
           >
             &times;
           </button>
-          <div className="relative max-w-4xl max-h-screen p-4">
+          <div className="relative max-w-7xl p-6">
             <img
               src={selectedImage}
               alt="Full screen view"

@@ -72,32 +72,34 @@ const PanchamukhiSection = () => {
   ];
 
   return (
-    <section className="bg-gray-50 py-20 font-sans">
-      <div className="container mx-auto px-6">
-        {/* Section Header - FONT SIZE REDUCED */}
-        <div className="text-center mb-16">
-          {/* MODIFIED: Reduced heading font size */}
-          <h2 className="text-3xl font-bold text-gray-800 font-heading">
+    <section className="bg-gray-50 py-16 md:py-20 font-sans">
+      <div className="container mx-auto px-4 sm:px-6">
+        {/* Section Header - More balanced */}
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 font-heading">
             Panchamukhi Shikshana
           </h2>
-          {/* MODIFIED: Reduced paragraph font size */}
-          <p className="mt-4 text-base text-gray-600 max-w-3xl mx-auto">
+          <p className="mt-4 text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
             At Vande Mataram Gurukulam, we follow the Panchamukhi model – nurturing every child across five key dimensions:
           </p>
         </div>
 
-        {/* Grid - FONT SIZE REDUCED */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
+        {/* Enhanced Grid Layout */}
+        <div className="flex flex-wrap justify-center -mx-3">
           {panchamukhiData.map((item, index) => (
-            <div key={index} className="flex flex-col items-center text-center p-6">
-              {item.icon}
-              {/* MODIFIED: Reduced card title font size */}
-              <h3 className="mt-6 text-lg font-bold text-gray-800 font-heading">
-                {item.title}
-              </h3>
-              <p className="mt-2 text-base text-gray-500 leading-relaxed">
-                {item.description}
-              </p>
+            <div 
+              key={index} 
+              className="w-full sm:w-1/2 lg:w-1/3 xl:w-1/5 p-3 mb-8"
+            >
+              <div className="h-full bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-6 flex flex-col items-center text-center">
+                {item.icon}
+                <h3 className="mt-5 text-lg font-bold text-gray-800 font-heading">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-sm text-gray-500 leading-relaxed flex-grow">
+                  {item.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
