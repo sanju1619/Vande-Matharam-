@@ -46,16 +46,26 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <NavLink
-              to="/"
-              className={`text-2xl font-bold transition-colors duration-300 ${
-                scrolled ? 'text-black' : 'text-white'
-              }`}
-            >
-              VANDE MATAHRAM GURUKULA
-            </NavLink>
-          </div>
+          {/* C:\Users\acube\OneDrive\Desktop\react\Vande-Matharam-\LOGO\Vande Mataram Gurukulam_Logo_Gold_121222_Small Size.png */}
+        <div className="flex-shrink-0">
+  <NavLink to="/" className="flex items-center space-x-3">
+    {/* Logo */}
+    <img
+      src="/LOGO/Vande Mataram Gurukulam_Logo_Gold_121222_Small Size.png"
+      alt="Vande Mataram Gurukulam Logo"
+      className="h-12 w-auto object-contain"
+    />
+
+    {/* Text beside logo */}
+    <span
+      className={`text-2xl font-bold transition-colors duration-300 ${
+        scrolled ? 'text-black' : 'text-white'
+      }`}
+    >
+      VANDE MATARAM GURUKULAM
+    </span>
+  </NavLink>
+</div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">

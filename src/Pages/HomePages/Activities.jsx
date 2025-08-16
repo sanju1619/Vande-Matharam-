@@ -25,25 +25,19 @@ const activitiesData = [
     image: organic,
     title: 'Vande Bharata Mataram',
     description: "Cultural programs celebrating India's heritage and instilling national pride.",
-    frequency: 'Weekly',
-    participation: '85% involvement',
-    percentage: 85
+   
   },
   {
     image: shlokas,
     title: 'Mallakhamba',
     description: 'Traditional Indian sport that builds strength, flexibility, and endurance while preserving our cultural heritage.',
-    frequency: 'Daily',
-    participation: '90% participation',
-    percentage: 90
+    
   },
   {
     image: community,
     title: 'Sports',
     description: 'Developing physical fitness, teamwork, and sportsmanship through various athletic activities.',
-    frequency: 'Monthly',
-    participation: '88% engagement',
-    percentage: 88
+   
   }
 ];
 
