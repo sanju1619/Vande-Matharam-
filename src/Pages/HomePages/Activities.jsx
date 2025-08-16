@@ -49,18 +49,18 @@ const activitiesData = [
 
 // Activity Card component (no changes here)
 const ActivityCard = ({ image, title, description, frequency, participation, percentage }) => (
-  <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col mx-2">
+  <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col mx-2"  style={{minHeight: '350px'}} >
     <img src={image} alt={title} className="w-full h-48 object-cover" />
     <div className="p-6 flex flex-col flex-grow">
       <h3 className="text-xl font-bold text-gray-800">{title}</h3>
       <p className="mt-2 text-gray-600 flex-grow">{description}</p>
-      <div className="mt-6">
-        <p className="text-sm text-gray-500 mb-1">{frequency}</p>
-        <div className="w-full bg-gray-200 rounded-full h-1.5">
+      {/* <div className="mt-6"> */}
+        {/* <p className="text-sm text-gray-500 mb-1">{frequency}</p> */}
+        {/* <div className="w-full bg-gray-200 rounded-full h-1.5">
           <div className="bg-yellow-400 h-1.5 rounded-full" style={{ width: `${percentage}%` }}></div>
-        </div>
-        <p className="text-xs text-gray-500 mt-1">{participation}</p>
-      </div>
+        </div> */}
+        {/* <p className="text-xs text-gray-500 mt-1">{participation}</p> */}
+      {/* </div> */}
     </div>
   </div>
 );
@@ -144,7 +144,7 @@ const ActivitiesSection = () => {
               <Link 
                 to="/activities" 
                 className="bg-yellow-400 rounded-lg shadow-lg h-full flex flex-col items-center justify-center p-6 text-center text-gray-900 hover:bg-yellow-500 transition-colors mx-2"
-                style={{minHeight: '445px'}} // Ensure same height as other cards
+                style={{minHeight: '350px'}} // Ensure same height as other cards
               >
                 <h3 className="text-2xl font-bold">Explore All Activities</h3>
                 <p className="mt-2">See everything we do to nurture our students.</p>
