@@ -5,9 +5,9 @@ const UniqueFeaturesSection = () => {
   const uniqueFeatures = [
     'Value-based curriculum rooted in Indian tradition',
     'Organic farming, cooking, self-reliance skills',
-    'Emphasis on Sanskrit and Indian knowledge systems',
+    'Emphasis on Samskrutham and Indian knowledge systems',
     'Theatre, storytelling, and expressive arts',
-    'Daily yoga, pranayama, and meditation practices',
+    'Daily yoga, pranayama, and Dhyana practices',
     'Emphasis on spiritual ecology and sustainable living',
     'Career guidance rooted in dharmic self-discovery',
     'Close mentor-student relationships',
@@ -30,7 +30,7 @@ const UniqueFeaturesSection = () => {
           {uniqueFeatures.map((feature, index) => (
             <div key={index} className="flex items-start">
               <span className="text-yellow-500 mr-3 mt-1">&#9679;</span>
-              <p className="text-base text-gray-600">
+              <p className="text-lg text-gray-900">
                 {feature}
               </p>
             </div>
