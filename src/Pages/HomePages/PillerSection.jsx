@@ -59,7 +59,7 @@ const PillarsSection = () => {
             linkTo="/volunteer"
             linkText="Join the Movement"
           >
-            Join the cause as a mentor, teacher, or supporter. Your time and skills can help shape the next generation of conscious citizens.
+            Join the as a mentor, teacher, or supporter. Your time and skills can help shape the next generation of conscious citizens.
           </PillarCard>
           
         </div>
