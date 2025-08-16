@@ -73,87 +73,80 @@ const AdrishyaSection = () => {
   return (
     <div className="font-sans max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
-      {/* 1. Our Moments Section */}
-      <div className="mb-16 sm:mb-20">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">
-          Our Moments
-        </h2>
-        <Slider {...sliderSettings}>
-          {galleryPhotos.map((photo, index) => (
-            <div key={index} className="px-2">
-              <img
-                src={photo}
-                alt={`Gallery image ${index + 1}`}
-                className="w-full h-56 sm:h-64 object-cover rounded-lg shadow-md"
-              />
+{/* 1. Adrishya Logo Section */}
+<div className="mb-16 sm:mb-20 text-center">
+  <img 
+    src={adrishyaLogo} 
+    alt="Adrishya Logo" 
+    className="mx-auto w-48 sm:w-56 md:w-64 lg:w-72 h-auto"
+  />
+</div>
+
+{/* 2. Our Journey Section */}
+<div className="bg-white rounded-2xl shadow-md p-6 sm:p-8 mb-16 sm:mb-20 border border-gray-200">
+  <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">
+    Our Journey
+  </h2>
+  <p className="text-lg text-gray-600 leading-relaxed text-justify">
+    Adrishya was born from a simple yet powerful idea: to channel the vibrant 
+    energy of youth towards nation-building. What began as a small group of 
+    friends passionate about seva (selfless service) has grown into a dynamic 
+    movement of volunteers dedicated to preserving and promoting India's cultural 
+    and spiritual heritage. Through our diverse initiatives, we aim to awaken 
+    social consciousness, foster environmental responsibility, and instill a 
+    sense of national pride in the next generation.
+  </p>
+</div>
+
+      {/* 3. Activities Grid - Updated with image slider per initiative */}
+<div className="mb-16 sm:mb-20">
+  <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">
+    Our Initiatives
+  </h2>
+  <div className="space-y-8">
+    {activitiesData.map((activity, index) => (
+      <div 
+        key={index} 
+        className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200"
+      >
+        {/* Title + Description */}
+        <p className="text-gray-700 mb-4">
+          <span className="font-bold text-gray-900">{activity.title} - </span>
+          {activity.description}
+        </p>
+
+        {/* Slick Slider with images */}
+        <Slider
+          dots={false}
+          infinite={true}
+          speed={600}
+          slidesToShow={3}
+          slidesToScroll={1}
+          arrows={true}
+          responsive={[
+            { breakpoint: 1024, settings: { slidesToShow: 2 } },
+            { breakpoint: 640, settings: { slidesToShow: 1 } }
+          ]}
+        >
+          {[...Array(6)].map((_, i) => (
+            <div key={i} className="px-2">
+              <div className="w-full h-40 rounded-lg shadow-md overflow-hidden">
+                <img 
+                  src={activity.image} 
+                  alt={`${activity.title} ${i+1}`} 
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           ))}
         </Slider>
       </div>
+    ))}
+  </div>
+</div>
 
-      {/* 2. Our Journey Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center mb-16 sm:mb-20">
-        <div className="flex justify-center order-2 md:order-1">
-          <img 
-            src={journeyImage} 
-            alt="Adrishya Journey" 
-            className="rounded-xl shadow-lg w-full max-w-md object-cover h-72 sm:h-80 md:h-96"
-          />
-        </div>
-        <div className="order-1 md:order-2">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Our Journey</h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            Adrishya was born from a simple yet powerful idea: to channel the vibrant energy of youth towards nation-building. What began as a small group of friends passionate about seva (selfless service) has grown into a dynamic movement of volunteers dedicated to preserving and promoting India's cultural and spiritual heritage. Through our diverse initiatives, we aim to awaken social consciousness, foster environmental responsibility, and instill a sense of national pride in the next generation.
-          </p>
-        </div>
-      </div>
 
-      {/* 3. Activities Grid */}
-      <div className="mb-16 sm:mb-20">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">
-          Our Initiatives
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {activitiesData.map((activity, index) => (
-            <div 
-              key={index} 
-              className="bg-white p-5 sm:p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer border border-gray-100"
-              onClick={() => setSelectedActivity(activity)}
-            >
-              <img 
-                src={activity.image} 
-                alt={activity.title} 
-                className="w-full h-48 object-cover rounded-md mb-4"
-              />
-              <h3 className="text-xl font-bold text-gray-800 mb-3">{activity.title}</h3>
-              <p className="text-gray-600">{activity.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Modal for Enlarged Image */}
-      {selectedActivity && (
-        <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4">
-          <div className="bg-white max-w-3xl w-full rounded-xl shadow-xl overflow-hidden">
-            <button 
-              className="absolute top-4 right-4 text-gray-500 hover:text-black text-3xl z-10 bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md"
-              onClick={() => setSelectedActivity(null)}
-            >
-              &times;
-            </button>
-            <img 
-              src={selectedActivity.image} 
-              alt={selectedActivity.title} 
-              className="w-full h-96 object-cover"
-            />
-            <div className="p-6">
-              <h2 className="text-2xl font-bold mb-3">{selectedActivity.title}</h2>
-              <p className="text-gray-700">{selectedActivity.description}</p>
-            </div>
-          </div>
-        </div>
-      )}
+      
 
       {/* 4. Volunteer Section */}
       <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 mb-16 sm:mb-20">
