@@ -1,7 +1,7 @@
 // src/Pages/ActivityPage.jsx
 import React from 'react';
 import img1 from '../../assets/images/img1.jpg'; // Assuming you want to use the same hero image
-import PanchamukhiSection from './PanchamukhiSection ';
+import PanchamukhiSection from './PanchamukhiSection';
 import HolisticPathSection from './HolisticPath';
 import UniqueFeaturesSection from './UniqueSection';
 // You can replace this with an image more relevant to your activities
