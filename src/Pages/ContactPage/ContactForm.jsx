@@ -7,16 +7,17 @@ import "leaflet/dist/leaflet.css";
 // Fix default marker icons in React
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
-  iconRetinaUrl:
-    "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
-  iconUrl:
-    "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
-  shadowUrl:
-    "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+  iconRetinaUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
+  iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+  shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
 });
 
 const ContactFormSection = () => {
-  const position = [11.923350921035507, 76.94053866118928]; // Example: Bangalore coords
+  // TODO: Replace with exact coords for the Google Maps place if you have them
+const position = [15.6361, 74.5049]; // Thimmapur-M-Tadakod, Karnataka
+
+  const mapsUrl = "https://maps.app.goo.gl/v1HWcK2NWuwTZUJM9";
+  const addressText = "Thimmapur-M-Tadakod, Khanapur-M-Tadakod, Karnataka 581105";
 
   return (
     <section className="bg-white py-20 font-sans">
@@ -72,25 +73,50 @@ const ContactFormSection = () => {
 
           {/* Right Column: Map */}
           <div className="w-full h-full min-h-[500px] flex flex-col justify-between">
-            <MapContainer 
-              center={position} 
-              zoom={15} 
-              style={{ height: "100%", width: "100%", borderRadius: "0.5rem" }}
-            >
-              <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              />
-              <Marker position={position}>
-                <Popup>
-                  VM Gurukulam <br /> Knowledge City
-                </Popup>
-              </Marker>
-            </MapContainer>
+              <MapContainer 
+    center={position} 
+    zoom={15} 
+    style={{ height: "100%", width: "100%", borderRadius: "0.5rem" }}
+    className="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+  >
+    <TileLayer
+      attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    />
+    <Marker position={position}>
+      <Popup>
+        <div className="space-y-1">
+          <div className="font-semibold">VM Gurukulam</div>
+          <div className="text-sm">
+            Thimmapur-M-Tadakod, Khanapur-M-Tadakod, Karnataka 581105
+          </div>
+          <a
+            href="https://maps.app.goo.gl/v1HWcK2NWuwTZUJM9"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-yellow-600 underline text-sm"
+          >
+            Open in Google Maps
+          </a>
+        </div>
+      </Popup>
+    </Marker>
+  </MapContainer>
 
             {/* Contact details below map */}
             <div className="mt-6 text-gray-600">
-              <p><span className="font-bold">Address:</span> 123 Gurukulam Lane, Knowledge City, KA 560001</p>
+              <p>
+                <span className="font-bold">Address:</span>{" "}
+                {addressText} •{" "}
+                <a
+                  href={mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-yellow-600 underline"
+                >
+                  Open in Google Maps
+                </a>
+              </p>
               <p><span className="font-bold">Email:</span> contact@vmgurukulam.org</p>
             </div>
           </div>

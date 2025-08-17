@@ -29,8 +29,9 @@ const ContactDetailsSection = () => {
             <LocationIcon />
             <h3 className="text-xl font-bold text-gray-800 font-heading">Address</h3>
             <p className="mt-2 text-base text-gray-600">
-              123 Gurukulam Lane, <br />
-              Knowledge City, KA 560001
+               Thimmapur-M-Tadakod, <br />  
+             Khanapur-M-Tadakod,<br />
+             Karnataka 581105
             </p>
           </div>
 
