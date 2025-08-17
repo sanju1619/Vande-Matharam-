@@ -1,33 +1,46 @@
 import React from 'react';
-import teamMember1 from '../../assets/images/teacher.png';
-import teamMember2 from '../../assets/images/teacher.png';
-import teamMember3 from '../../assets/images/teacher.png';
-import teamMember4 from '../../assets/images/teacher.png';
+import teamMember1 from '../../assets/Team/Madhusudan.png';
+import teamMember2 from '../../assets/Team/SAMSKRUTHI.png';
+import teamMember3 from '../../assets/Team/DANAMMA.png';
+import teamMember4 from '../../assets/Team/NEHA.png';
 
 const TeamSection = () => {
   const teamData = [
     {
-      name: 'Greeg Graham',
-      role: 'CEO',
-      bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio.',
+      name: 'MADHUSUDHAN G',
+      role: 'Founder & Trustee of Vande Mataram Gurukulam',
+      bio: ' 30 years old Founder & Trustee of Vande Mataram Gurukulam Mechanical Engineer AMC Engineering College From Bengaluru',
       image: teamMember1
     },
     {
-      name: 'Jennifer Greive',
-      role: 'President',
-      bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio.',
+      name: 'SAMSKRUTHI K',
+      role: 'Trustee of Vande Mataram Gurukulam',
+      bio: `24 years old
+Trustee of Vande Mataram
+Gurukulam
+MA Performing Arts - Christ
+(Deemed To be University)
+From Bengaluru`,
       image: teamMember2
     },
     {
-      name: 'Patrick Marx',
-      role: 'Marketer',
-      bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio.',
+      name: 'DANAMMA',
+      role: 'Full - time member in Vande Mataram Gurukulam',
+      bio: `25 years old
+Full - time member in Vande
+Mataram Gurukulam
+Diploma Civil Engineering
+From Hubballi`,
       image: teamMember3
     },
     {
-      name: 'Mike Coolbert',
-      role: 'Partner',
-      bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio.',
+      name:  `NEHA K`,
+      role: `Member in Vande Mataram
+Gurukulam`,
+      bio: `21 yrs old.
+Electronics and Communication
+Engineering student - SDM college of
+Engineering and Technology`,
       image: teamMember4
     }
   ];
