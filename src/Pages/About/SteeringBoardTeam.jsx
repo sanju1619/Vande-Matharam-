@@ -4,27 +4,27 @@ import React from 'react';
 // --- IMAGE PLACEHOLDERS ---
 // You will need to replace these with your actual board member photos.
 // I've created 9 placeholders for you.
-import boardMember1 from '../../assets/images/teacher.png';
-import boardMember2 from '../../assets/images/teacher.png';
-import boardMember3 from '../../assets/images/teacher.png';
-import boardMember4 from '../../assets/images/teacher.png';
-import boardMember5 from '../../assets/images/teacher.png';
-import boardMember6 from '../../assets/images/teacher.png';
-import boardMember7 from '../../assets/images/teacher.png';
-import boardMember8 from '../../assets/images/teacher.png';
-import boardMember9 from '../../assets/images/teacher.png';
+import boardMember1 from '../../assets/SteeringBoardTeam/shubhajaiprakash.jpg'
+import boardMember2 from '../../assets/SteeringBoardTeam/member2.jpg'
+import boardMember3 from '../../assets/SteeringBoardTeam/Jayashree Ramakrishna.jpg'
+import boardMember4 from '../../assets/SteeringBoardTeam/Hasabi.jpg'
+import boardMember5 from '../../assets/SteeringBoardTeam/Jagannath Bidrigowdra.jpg'
+import boardMember6 from '../../assets/SteeringBoardTeam/girish.jpg'
+import boardMember7 from '../../assets/SteeringBoardTeam/shubhajaiprakash.jpg'
+import boardMember8 from '../../assets/SteeringBoardTeam/Ranjith.jpg'
+import boardMember9 from '../../assets/SteeringBoardTeam/shubhajaiprakash.jpg'
 
 const SteeringBoardSection = () => {
   const boardData = [
-    { name: 'Board Member One', image: boardMember1 },
-    { name: 'Board Member Two', image: boardMember2 },
-    { name: 'Board Member Three', image: boardMember3 },
-    { name: 'Board Member Four', image: boardMember4 },
-    { name: 'Board Member Five', image: boardMember5 },
-    { name: 'Board Member Six', image: boardMember6 },
-    { name: 'Board Member Seven', image: boardMember7 },
-    { name: 'Board Member Eight', image: boardMember8 },
-    { name: 'Board Member Nine', image: boardMember9 },
+    { name: 'Shubha Jaiprakash', image: boardMember1 },
+    { name: `Dr.P Subbanna Bhat`, image: boardMember2 },
+    { name: 'Jayashree Ramakrishna', image: boardMember3 },
+    { name: 'Dr C S Hasabi', image: boardMember4 },
+    { name: 'Jagannath Bidrigowdra', image: boardMember5 },
+    { name: 'Girish Prabhu S', image: boardMember6 },
+    { name: 'Santosh Ji', image: '' },
+    { name: 'Ranjith B R', image: boardMember8 },
+    { name: 'Raghavendra B S ', image:'' },
   ];
 
   return (
