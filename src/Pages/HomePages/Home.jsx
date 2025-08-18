@@ -31,9 +31,9 @@ const HomePage = () => {
         <div className="absolute inset-0 bg-black opacity-50"></div>
 
         <main className="relative z-10 max-w-4xl mx-auto px-4 mt-50">
-          <h1 className="text-3xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
+          <h1 className="text-2xl tracking-tight font-extrabold text-white sm:text-4xl md:text-5xl">
             <span className="block My Custom Font">
-              A free residential gurukulam nurturing holistic growth through value-based education
+              A Free Residential Gurukulam Nurturing Holistic Growth Through Value-Based Education
             </span>
           </h1>
 
