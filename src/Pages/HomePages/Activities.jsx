@@ -4,9 +4,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import yoga from '../../assets/images/yoga.jpg'
-import organic from '../../assets/images/organic.jpg'
-import shlokas from '../../assets/images/slokas.jpg'
-import community from '../../assets/images/community.jpg'
+import organic from '../../assets/activities/culture.jpg'
+import shlokas from '../../assets/activities/Mallaghamba.jpg'
+import community from '../../assets/activities/Football.jpg'
 // Import react-slick's css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -17,9 +17,7 @@ const activitiesData = [
     image: yoga,
     title: 'Vidya Varna Painting',
     description: 'Transforming schools with vibrant, educational murals that inspire learning and patriotism.',
-    frequency: 'Every Morning',
-    participation: '95% participation',
-    percentage: 95
+    
   },
   {
     image: organic,
