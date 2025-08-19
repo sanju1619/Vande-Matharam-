@@ -73,39 +73,40 @@ function getCirclePosition(idx, total, radius, centerX, centerY) {
 
 export default function PanchamukhiSection() {
   const containerRef = useRef(null);
-  const [size, setSize] = useState(400);
+  const [size, setSize] = useState(300); // smaller default for mobile
 
   useEffect(() => {
     if (!containerRef.current) return;
     const observer = new ResizeObserver((entries) => {
       const rect = entries[0].contentRect;
-      setSize(rect.width);
+      // ✅ reduce max size so it fits inside navbar width
+      setSize(Math.min(rect.width, 340)); 
     });
     observer.observe(containerRef.current);
     return () => observer.disconnect();
   }, []);
 
   const center = size / 2;
-  const radius = size / 2.5;
+  const radius = size / 2.6; // ✅ slightly smaller radius
   const innerCircleRadius = size / 6;
 
   return (
     <>
       <style>{styles}</style>
       <section className="bg-gray-50 py-12 font-sans">
-        <div className="flex justify-center">
+        <div className="container mx-auto px-4 flex justify-center">
           <div
             ref={containerRef}
-            className="relative w-full max-w-[360px] md:max-w-[440px] aspect-square"
+            className="relative w-full aspect-square max-w-[340px] sm:max-w-[400px]" // ✅ tighter for mobile
           >
-            {/* Center Circle (always centered) */}
+            {/* Center Circle */}
             <div
               className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
-                w-32 h-32 md:w-40 md:h-40 bg-white rounded-full shadow-lg flex flex-col
+                w-20 h-20 md:w-28 md:h-28 bg-white rounded-full shadow-lg flex flex-col
                 items-center justify-center border-2 border-gray-200 text-center z-20"
             >
-              <span className="font-bold text-base md:text-lg">Panchamukhi</span>
-              <span className="font-bold text-base md:text-lg">Shikshana</span>
+              <span className="font-bold text-xs md:text-base">Panchamukhi</span>
+              <span className="font-bold text-xs md:text-base">Shikshana</span>
             </div>
 
             {panchamukhiData.map((item, idx) => {
@@ -118,13 +119,11 @@ export default function PanchamukhiSection() {
                 center
               );
 
-              const descX = center + (radius + 60) * Math.cos(angle);
-              const descY = center + (radius + 60) * Math.sin(angle);
+              const descX = center + (radius + 40) * Math.cos(angle); // ✅ tighter offset
+              const descY = center + (radius + 40) * Math.sin(angle);
 
-              const lineStartX =
-                center + innerCircleRadius * Math.cos(angle);
-              const lineStartY =
-                center + innerCircleRadius * Math.sin(angle);
+              const lineStartX = center + innerCircleRadius * Math.cos(angle);
+              const lineStartY = center + innerCircleRadius * Math.sin(angle);
 
               return (
                 <React.Fragment key={idx}>
@@ -152,22 +151,21 @@ export default function PanchamukhiSection() {
                       transform: "translate(-50%, -50%)",
                     }}
                   >
-                    {/* breathing border */}
                     <div
-                      className={`w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-md transition duration-500 ${item.bg} ${item.border}`}
+                      className={`w-10 h-10 md:w-14 md:h-14 rounded-full flex items-center justify-center shadow-md transition duration-500 ${item.bg} ${item.border}`}
                       style={{ animation: "pulse-border 2s infinite" }}
                     >
                       {item.icon}
                     </div>
                     <span
-                      className={`mt-1 md:mt-2 font-semibold text-sm md:text-base ${item.text}`}
+                      className={`mt-1 md:mt-2 font-semibold text-[10px] md:text-sm ${item.text}`}
                     >
                       {item.title}
                     </span>
 
                     {/* Description (hover) */}
                     <div
-                      className="absolute bg-white shadow-md rounded-lg p-2 md:p-3 w-32 md:w-40 text-xs md:text-sm 
+                      className="absolute bg-white shadow-md rounded-lg p-2 md:p-3 w-24 md:w-36 text-[9px] md:text-sm 
                         opacity-0 scale-90 transition-all duration-500 group-hover:opacity-100 group-hover:scale-100"
                       style={{
                         left: descX - x,
