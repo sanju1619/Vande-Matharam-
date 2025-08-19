@@ -73,40 +73,41 @@ function getCirclePosition(idx, total, radius, centerX, centerY) {
 
 export default function PanchamukhiSection() {
   const containerRef = useRef(null);
-  const [size, setSize] = useState(300); // smaller default for mobile
+  const [size, setSize] = useState(360); // default mobile size
 
   useEffect(() => {
     if (!containerRef.current) return;
     const observer = new ResizeObserver((entries) => {
       const rect = entries[0].contentRect;
-      // ✅ reduce max size so it fits inside navbar width
-      setSize(Math.min(rect.width, 340)); 
+      // lock within max-w to preserve circle shape
+      const newSize = Math.min(rect.width, 440); 
+      setSize(newSize);
     });
     observer.observe(containerRef.current);
     return () => observer.disconnect();
   }, []);
 
   const center = size / 2;
-  const radius = size / 2.6; // ✅ slightly smaller radius
+  const radius = size / 2.5;
   const innerCircleRadius = size / 6;
 
   return (
     <>
       <style>{styles}</style>
       <section className="bg-gray-50 py-12 font-sans">
-        <div className="container mx-auto px-4 flex justify-center">
+        <div className="flex justify-center">
           <div
             ref={containerRef}
-            className="relative w-full aspect-square max-w-[340px] sm:max-w-[400px]" // ✅ tighter for mobile
+            className="relative w-full aspect-square max-w-[300px] md:max-w-[440px]"
           >
-            {/* Center Circle */}
+            {/* Center Circle (always perfectly centered) */}
             <div
               className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
-                w-20 h-20 md:w-28 md:h-28 bg-white rounded-full shadow-lg flex flex-col
+                w-28 h-28 md:w-36 md:h-36 bg-white rounded-full shadow-lg flex flex-col
                 items-center justify-center border-2 border-gray-200 text-center z-20"
             >
-              <span className="font-bold text-xs md:text-base">Panchamukhi</span>
-              <span className="font-bold text-xs md:text-base">Shikshana</span>
+              <span className="font-bold text-sm md:text-lg">Panchamukhi</span>
+              <span className="font-bold text-sm md:text-lg">Shikshana</span>
             </div>
 
             {panchamukhiData.map((item, idx) => {
@@ -119,8 +120,8 @@ export default function PanchamukhiSection() {
                 center
               );
 
-              const descX = center + (radius + 40) * Math.cos(angle); // ✅ tighter offset
-              const descY = center + (radius + 40) * Math.sin(angle);
+              const descX = center + (radius + 50) * Math.cos(angle);
+              const descY = center + (radius + 50) * Math.sin(angle);
 
               const lineStartX = center + innerCircleRadius * Math.cos(angle);
               const lineStartY = center + innerCircleRadius * Math.sin(angle);
@@ -152,20 +153,20 @@ export default function PanchamukhiSection() {
                     }}
                   >
                     <div
-                      className={`w-10 h-10 md:w-14 md:h-14 rounded-full flex items-center justify-center shadow-md transition duration-500 ${item.bg} ${item.border}`}
+                      className={`w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center shadow-md transition duration-500 ${item.bg} ${item.border}`}
                       style={{ animation: "pulse-border 2s infinite" }}
                     >
                       {item.icon}
                     </div>
                     <span
-                      className={`mt-1 md:mt-2 font-semibold text-[10px] md:text-sm ${item.text}`}
+                      className={`mt-1 md:mt-2 font-semibold text-xs md:text-sm ${item.text}`}
                     >
                       {item.title}
                     </span>
 
                     {/* Description (hover) */}
                     <div
-                      className="absolute bg-white shadow-md rounded-lg p-2 md:p-3 w-24 md:w-36 text-[9px] md:text-sm 
+                      className="absolute bg-white shadow-md rounded-lg p-2 md:p-3 w-28 md:w-40 text-xs md:text-sm 
                         opacity-0 scale-90 transition-all duration-500 group-hover:opacity-100 group-hover:scale-100"
                       style={{
                         left: descX - x,
