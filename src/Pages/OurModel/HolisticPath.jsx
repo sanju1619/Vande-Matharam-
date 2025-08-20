@@ -1,5 +1,5 @@
 import React from 'react';
-import holisticPathImage from '../../assets/images/img1.jpg'; 
+import holisticPathImage from '../../assets/images/Holistickpath.jpg';
 
 const HolisticPathSection = () => {
   return (
