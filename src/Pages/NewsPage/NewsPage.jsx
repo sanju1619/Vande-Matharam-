@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import kargil from '../../assets/images/Kargil.jpg';
-import kanyakumari from '../../assets/images/kanyakumari.jpg';
+import kargil from '../../assets/Slide 6/Kargil/kargil.png';
+import kanyakumari from '../../assets/Slide 6/3. Kanyakumari/Kanyakumari.png';
 import culture from '../../assets/images/culture.jpg';
 
 // --- UPCOMING EVENTS (shown at the top on View All) ---
@@ -64,7 +64,7 @@ const newsData = [
 
 // Reusable card for news grid
 const NewsCard = ({ image, title, date, excerpt, link }) => (
-  <div className="bg-white rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+  <div className="bg-white rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-xl h-56 object-cover">
     <Link to={link}>
       <img src={image} alt={title} className="w-full h-56 object-cover" />
     </Link>
