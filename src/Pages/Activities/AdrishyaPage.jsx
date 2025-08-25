@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 // --- IMAGE & LOGO PLACEHOLDERS ---
-import adrishyaLogo from '../../assets/images/img1.jpg';
+import adrishyaLogo from '../../assets/adrishiyalogo/AdrishyaLogo.png';
 import adrishya1 from '../../assets/images/adrishiya1.jpg';
 import journeyImage from '../../assets/images/img1.jpg';
 import vidyavarnaImage from '../../assets/images/img1.jpg';

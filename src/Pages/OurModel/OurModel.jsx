@@ -1,6 +1,6 @@
 // src/Pages/ActivityPage.jsx
 import React from 'react';
-import img1 from '../../assets/images/img1.jpg'; // Assuming you want to use the same hero image
+import img1 from '../../assets/OurmodelBaground/BagroundOurmodel.png';
 import PanchamukhiSection from './PanchamukhiSection';
 import HolisticPathSection from './HolisticPath';
 import UniqueFeaturesSection from './UniqueSection';
