@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import kargil from '../../assets/Slide 6/Kargil/kargil.png'
-import kanyakumari from '../../assets/Slide 6/3. Kanyakumari/Kanyakumari.png'
+import kargil from '../../assets/Slide6/Kargil/kargil.png'
+import kanyakumari from '../../assets/Slide6/3.Kanyakumari/Kanyakumari.png'
 import culture from '../../assets/images/culture.jpg'
 // --- DATA for the news cards ---
 // You can easily update this with your latest news and activities
