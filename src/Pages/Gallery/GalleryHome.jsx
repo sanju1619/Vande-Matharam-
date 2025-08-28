@@ -1,6 +1,32 @@
-// src/Pages/GalleryPage.jsx
+
 import React, { useState } from 'react';
 import heroImage from '../../assets/images/img_2.jpg';
+import img1 from '../../assets/Adrishya/img1.jpg'
+import img2 from '../../assets/Adrishya/img2.jpeg'
+import img3 from '../../assets/Adrishya/img3.jpg'
+import img4 from '../../assets/Adrishya/img4.jpg'
+import img5 from '../../assets/Adrishya/img5.jpg'
+import img6 from '../../assets/Adrishya/img6.jpg'
+import img7 from '../../assets/Adrishya/img7.jpg'
+import img8 from '../../assets/Adrishya/img8.jpg'
+import img9 from '../../assets/Adrishya/img9.jpg'
+import img10 from '../../assets/Adrishya/img10.jpg'
+import img11 from '../../assets/Adrishya/img11.jpg'
+import img12 from '../../assets/Adrishya/img12.jpg'
+import img13 from '../../assets/Adrishya/img13.jpg'
+import img14 from '../../assets/Adrishya/img14.jpg'
+import img15 from '../../assets/Adrishya/img15.jpg'
+import img16 from '../../assets/Adrishya/img16.jpg'
+import img17 from '../../assets/Adrishya/img17.jpg'
+import img18 from '../../assets/Adrishya/img18.jpg'
+import img19 from '../../assets/Adrishya/img19.jpg'
+import img20 from '../../assets/Adrishya/img20.jpg'
+import img21 from '../../assets/Adrishya/img21.jpg'
+import img22 from '../../assets/Adrishya/img22.jpeg'
+import img23 from '../../assets/Adrishya/img23.jpeg'
+import img24 from '../../assets/Adrishya/img24.jpg'
+import img25 from '../../assets/Adrishya/img25.jpg'
+
 
 // -------------------- Gurukula (kept from NEW) --------------------
 const gurukulamImages = [
@@ -15,38 +41,10 @@ const gurukulamImages = [
 // -------------------- Adrishya (taken from OLD) --------------------
 // NOTE: Files live in /public/Gallery photos/Adrishya/...
 const ADRISHYA_IMAGES = [
-  '/Gallery%20photos/Adrishya/Camp%20for%20VVN%20Degree%20College%20Students%20%F0%9F%99%8F.webp.jpg',
-  '/Gallery%20photos/Adrishya/Copy%20of%20DSC03085.JPG',
-  '/Gallery%20photos/Adrishya/g1.jpg',
-  '/Gallery%20photos/Adrishya/Hostel%20memories,%20Hirebendigere%F0%9F%99%8F.webp%20(1).jpg',
-
-  // Ensure these exist as real JPGs (converted from CR2)
-  '/Gallery%20photos/Adrishya/IMG_0174.jpg',
-  '/Gallery%20photos/Adrishya/IMG_0368.jpg',
-  '/Gallery%20photos/Adrishya/IMG_0381%20(1).jpg',
-  '/Gallery%20photos/Adrishya/IMG_0381%20(1)(1).jpg',
-
-  '/Gallery%20photos/Adrishya/IMG_5525.jpg',
-  '/Gallery%20photos/Adrishya/IMG_8562.jpg',
-  '/Gallery%20photos/Adrishya/IMG_8580.jpg',
-  '/Gallery%20photos/Adrishya/IMG_8702.jpg',
-  '/Gallery%20photos/Adrishya/IMG_8730.jpg',
-  '/Gallery%20photos/Adrishya/IMG_8733.jpg',
-  '/Gallery%20photos/Adrishya/IMG_8757.jpg',
-  '/Gallery%20photos/Adrishya/IMG_8769.jpg',
-  '/Gallery%20photos/Adrishya/IMG_8774.jpg',
-  '/Gallery%20photos/Adrishya/IMG_8789.jpg',
-  '/Gallery%20photos/Adrishya/IMG_8808.jpg',
-  '/Gallery%20photos/Adrishya/IMG_8816.jpg',
-  '/Gallery%20photos/Adrishya/IMG_8817.jpg',
-
-  '/Gallery%20photos/Adrishya/IMG-20250801-WA0066.jpg',
-  '/Gallery%20photos/Adrishya/IMG-20250801-WA0074.jpg',
-  '/Gallery%20photos/Adrishya/IMG-20250805-WA0004.jpg',
-
-  '/Gallery%20photos/Adrishya/Jain%20Engineering%20college,%20%20Belagavi..webp.jpg',
-  '/Gallery%20photos/Adrishya/Ramakrishna%20Mission%20ashrama,%20belagavi..webp%20(2).jpg',
-];
+  img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, 
+  img12,img13,img14,img15,img16,img17,img18,img19,
+img20,img21,img22,img23,img24,img25,
+]
 
 const PREVIEW_COUNT = 6; // 5 images + 1 "+N more" tile (old behavior)
 
