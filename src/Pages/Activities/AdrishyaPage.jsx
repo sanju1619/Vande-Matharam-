@@ -1,5 +1,8 @@
 // src/components/AdrishyaSection.jsx
-import React from 'react';
+import React, { useState } from 'react';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 // --- IMAGE & LOGO PLACEHOLDERS ---
 import adrishyaLogo from '../../assets/adrishiyalogo/AdrishyaLogo.png';
@@ -11,8 +14,37 @@ import workshopImage from '../../assets/images/img1.jpg';
 import environmentImage from '../../assets/images/img1.jpg';
 import socialImage from '../../assets/images/img1.jpg';
 
-// --- PLACEHOLDER PHOTOS FOR SCROLLERS ---
-// Replace these with arrays of your actual photo paths.
+const sliderSettings = {
+  dots: false,
+  infinite: true,
+  speed: 1000,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2500,
+  pauseOnHover: true,
+  responsive: [
+    { breakpoint: 1024, settings: { slidesToShow: 2 } },
+    { breakpoint: 640, settings: { slidesToShow: 1 } }
+  ]
+};
+
+const sliderVolunteerSettings = {
+  dots: false,
+  infinite: true,
+  speed: 1000,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2500,
+  arrows: false,
+  pauseOnHover: true,
+  responsive: [
+    { breakpoint: 1024, settings: { slidesToShow: 2 } },
+    { breakpoint: 640, settings: { slidesToShow: 1 } }
+  ]
+};
+
 const galleryPhotos = [
   adrishya1,
   'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2070',
@@ -27,7 +59,6 @@ const volunteerPhotos = [
   'https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=1887',
 ];
 
-
 const AdrishyaSection = () => {
   const activitiesData = [
     { title: 'Vidyavarna Painting', description: 'Transformed 75+ government schools and ashramas with vibrant, educational, and value-based wall art that inspires learning and patriotism.', image: adrishya1 },
@@ -40,16 +71,16 @@ const AdrishyaSection = () => {
   const [selectedActivity, setSelectedActivity] = useState(null);
 
   return (
-    <div className="font-sans">
-      {/* 1. Photo Scroller */}
-      <div className="mb-20">
-        <h2 className="text-3xl font-bold text-gray-800 font-heading text-center mb-8">Our Moments</h2>
-        <div className="flex overflow-x-auto space-x-4 p-4 -m-4">
-          {galleryPhotos.map((photo, index) => (
-            <img key={index} src={photo} alt={`Gallery image ${index + 1}`} className="flex-shrink-0 w-80 h-56 rounded-lg shadow-md object-cover"/>
-          ))}
-        </div>
-      </div>
+    <div className="font-sans max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+{/* 1. Adrishya Logo Section */}
+<div className="mb-16 sm:mb-20 text-center">
+  <img 
+    src={adrishyaLogo} 
+    alt="Adrishya Logo" 
+    className="mx-auto w-48 sm:w-56 md:w-64 lg:w-72 h-auto"
+  />
+</div>
 
 {/* 2. Our Journey Section */}
 <div className="bg-white rounded-2xl shadow-md p-6 sm:p-8 mb-16 sm:mb-20 border border-gray-200">
