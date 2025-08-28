@@ -13,7 +13,20 @@ import culturalImage from '../../assets/images/img1.jpg';
 import workshopImage from '../../assets/images/img1.jpg';
 import environmentImage from '../../assets/images/img1.jpg';
 import socialImage from '../../assets/images/img1.jpg';
-
+import vv1 from '../../assets/GurukulaActivities/vv1.jpg'
+import vv2 from '../../assets/GurukulaActivities/vv2.png'
+import vv3 from '../../assets/GurukulaActivities/vv3.JPG'
+import vv4 from '../../assets/GurukulaActivities/vv4.JPG'
+import vv6 from '../../assets/GurukulaActivities/vv6.JPG'
+import cl1 from '../../assets/GurukulaActivities/cl1.JPG'
+import cl2 from '../../assets/GurukulaActivities/cl2.JPG'
+import cl3 from '../../assets/Slide6/Kargil/kargil.png'
+import work1 from '../../assets/GurukulaActivities/work1.JPG'
+import en1 from '../../assets/GurukulaActivities/en1.JPG'
+import sc1 from '../../assets/GurukulaActivities/sc1.JPG'
+import sc2 from '../../assets/GurukulaActivities/sc2.JPG'
+import sc3 from '../../assets/GurukulaActivities/sc3.png'
+import sc4 from '../../assets/GurukulaActivities/sc4.png'
 const sliderSettings = {
   dots: false,
   infinite: true,
@@ -61,11 +74,11 @@ const volunteerPhotos = [
 
 const AdrishyaSection = () => {
   const activitiesData = [
-    { title: 'Vidyavarna Painting', description: 'Transformed 75+ government schools and ashramas with vibrant, educational, and value-based wall art that inspires learning and patriotism.', image: adrishya1 },
-    { title: 'Cultural Activities', description: 'Conducted 150+ cultural programs across Karnataka like Vande Bharata Mataram, Viveka Bharatha, and Kargil Vijay Diwas to instill national pride.', image: culturalImage },
-    { title: 'Workshops & Sessions', description: '500+ sessions on values, leadership, and culture to awaken young minds and build confident, conscious citizens.', image: workshopImage },
-    { title: 'Environment', description: 'Initiatives like seed ball drives, goshala and lake cleaning, and bird water stations to nurture eco-consciousness.', image: environmentImage },
-    { title: 'Social Awareness', description: 'Organized impactful drives like Vastra Daan, eco-brick making, and patriotic frame crafting using recycled materials.', image: socialImage },
+    { title: 'Vidyavarna Painting', description: 'Transformed 75+ government schools and ashramas with vibrant, educational, and value-based wall art that inspires learning and patriotism.', image: [vv1, vv2, vv3, vv4, vv6] },
+    { title: 'Cultural Activities', description: 'Conducted 150+ cultural programs across Karnataka like Vande Bharata Mataram, Viveka Bharatha, and Kargil Vijay Diwas to instill national pride.', image: [cl1, cl2,cl3] },
+    { title: 'Social Awareness', description: 'Organized impactful drives like Vastra Daan, eco-brick making, and patriotic frame crafting using recycled materials.', image: [sc1,sc2,sc3,sc4] },
+    { title: 'Workshops & Sessions', description: '500+ sessions on values, leadership, and culture to awaken young minds and build confident, conscious citizens.', image: [work1,work1] },
+    { title: 'Environment', description: 'Initiatives like seed ball drives, goshala and lake cleaning, and bird water stations to nurture eco-consciousness.', image: [en1,en1] },
   ];
 
   const [selectedActivity, setSelectedActivity] = useState(null);
@@ -73,80 +86,77 @@ const AdrishyaSection = () => {
   return (
     <div className="font-sans max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
-{/* 1. Adrishya Logo Section */}
-<div className="mb-16 sm:mb-20 text-center">
-  <img 
-    src={adrishyaLogo} 
-    alt="Adrishya Logo" 
-    className="mx-auto w-48 sm:w-56 md:w-64 lg:w-72 h-auto"
-  />
-</div>
+      {/* 1. Adrishya Logo Section */}
+      <div className="mb-16 sm:mb-20 text-center">
+        <img 
+          src={adrishyaLogo} 
+          alt="Adrishya Logo" 
+          className="mx-auto w-48 sm:w-56 md:w-64 lg:w-72 h-auto"
+        />
+      </div>
 
-{/* 2. Our Journey Section */}
-<div className="bg-white rounded-2xl shadow-md p-6 sm:p-8 mb-16 sm:mb-20 border border-gray-200">
-  <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">
-    Our Journey
-  </h2>
-  <p className="text-lg text-gray-600 leading-relaxed text-justify">
-    Adrishya was born from a simple yet powerful idea: to channel the vibrant 
-    energy of youth towards nation-building. What began as a small group of 
-    friends passionate about seva (selfless service) has grown into a dynamic 
-    movement of volunteers dedicated to preserving and promoting India's cultural 
-    and spiritual heritage. Through our diverse initiatives, we aim to awaken 
-    social consciousness, foster environmental responsibility, and instill a 
-    sense of national pride in the next generation.
-  </p>
-</div>
-
-      {/* 3. Activities Grid - Updated with image slider per initiative */}
-<div className="mb-16 sm:mb-20">
-  <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">
-    Our Initiatives
-  </h2>
-  <div className="space-y-8">
-    {activitiesData.map((activity, index) => (
-      <div 
-        key={index} 
-        className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200"
-      >
-        {/* Title + Description */}
-        <p className="text-gray-700 mb-4">
-          <span className="font-bold text-gray-900">{activity.title} - </span>
-          {activity.description}
+      {/* 2. Our Journey Section */}
+      <div className="bg-white rounded-2xl shadow-md p-6 sm:p-8 mb-16 sm:mb-20 border border-gray-200">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">
+          Our Journey
+        </h2>
+        <p className="text-lg text-gray-600 leading-relaxed text-justify">
+          Adrishya was born from a simple yet powerful idea: to channel the vibrant 
+          energy of youth towards nation-building. What began as a small group of 
+          friends passionate about seva (selfless service) has grown into a dynamic 
+          movement of volunteers dedicated to preserving and promoting India's cultural 
+          and spiritual heritage. Through our diverse initiatives, we aim to awaken 
+          social consciousness, foster environmental responsibility, and instill a 
+          sense of national pride in the next generation.
         </p>
+      </div>
 
-        {/* Slick Slider with images */}
-        <Slider
-          dots={false}
-          infinite={true}
-          speed={600}
-          slidesToShow={3}
-          slidesToScroll={1}
-          arrows={true}
-          responsive={[
-            { breakpoint: 1024, settings: { slidesToShow: 2 } },
-            { breakpoint: 640, settings: { slidesToShow: 1 } }
-          ]}
-        >
-          {[...Array(6)].map((_, i) => (
-            <div key={i} className="px-2">
-              <div className="w-full h-40 rounded-lg shadow-md overflow-hidden">
-                <img 
-                  src={activity.image} 
-                  alt={`${activity.title} ${i+1}`} 
-                  className="w-full h-full object-cover"
-                />
-              </div>
+      {/* 3. Our Initiatives Section */}
+      <div className="mb-16 sm:mb-20">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">
+          Our Initiatives
+        </h2>
+        <div className="space-y-8">
+          {activitiesData.map((activity, index) => (
+            <div 
+              key={index} 
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200"
+            >
+              {/* Title + Description */}
+              <p className="text-gray-700 mb-4">
+                <span className="font-bold text-gray-900">{activity.title} - </span>
+                {activity.description}
+              </p>
+
+              {/* Slick Slider with images */}
+              <Slider
+                dots={false}
+                infinite={true}
+                speed={600}
+                slidesToShow={3}
+                slidesToScroll={1}
+                arrows={true}
+                responsive={[
+                  { breakpoint: 1024, settings: { slidesToShow: 2 } },
+                  { breakpoint: 640, settings: { slidesToShow: 1 } }
+                ]}
+              >
+                {(Array.isArray(activity.image) ? activity.image : [activity.image]).map((img, i) => (
+                  <div key={i} className="px-2">
+                    <div className="w-full h-40 rounded-lg shadow-md overflow-hidden">
+                      <img 
+                        src={img} 
+                        alt={`${activity.title} ${i + 1}`} 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </Slider>
             </div>
           ))}
-        </Slider>
+        </div>
       </div>
-    ))}
-  </div>
-</div>
-
-
-      
 
       {/* 4. Volunteer Section */}
       <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 mb-16 sm:mb-20">
