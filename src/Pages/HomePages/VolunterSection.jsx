@@ -4,6 +4,7 @@ import React from 'react';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 import volunter from '../../assets/images/volunter.jpg'
+import volu from '../../assets/images/volu.png'
 
 // IMPORTANT: Updated image URL to something that looks better as a vertical image
 // If your image is horizontal, it will still work but might look less balanced.
@@ -26,7 +27,7 @@ const VolunteerSection = () => {
           {/* Left Column: Image Card */}
           <div className="bg-white p-4 rounded-2xl shadow-xl">
             <img 
-              src={volunteerImageUrl} 
+              src={volu} 
               alt="Group of happy volunteers"
               // UPDATED: Added h-full and w-full for consistent sizing within its container
               // Added lg:h-[450px] to control the height of the image on large screens
