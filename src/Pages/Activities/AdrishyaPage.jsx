@@ -30,7 +30,7 @@ import sc4 from '../../assets/GurukulaActivities/sc4.png'
 import sc5 from '../../assets/GurukulaActivities/sc5.png'
 
 // ✅ Directly import volunteer image
-import volunteerImage from '../../../public/volunteerimage/IMG_8885.jpg';
+import volunteerImage from '../../assets/Adrishya/v.png'
 
 const sliderSettings = {
   dots: false,
