@@ -33,6 +33,8 @@ function App() {
         <Route path='/contact' element={<ContactPage />} />
         <Route path='/a' element={<AboutSection />} />
         <Route path='/news' element={<NewsPage />} />
+        <Route path="/news/:id" element={<NewsPage />} /> {/* Same component handles detail */}
+
       </Routes>
 
       <Footer />
