@@ -9,7 +9,7 @@ const ContactPage = () => {
     <div className="overflow-x-hidden"> {/* Prevent horizontal scroll */}
       {/* Hero Section */}
       <div
-        className="relative min-h-[80vh] bg-cover bg-center flex items-center justify-center text-center"
+        className="relative min-h-[100vh] bg-cover bg-center flex items-center justify-center text-center"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
