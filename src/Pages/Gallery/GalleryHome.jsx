@@ -26,6 +26,10 @@ import img22 from '../../assets/Adrishya/img22.jpeg'
 import img23 from '../../assets/Adrishya/img23.jpeg'
 import img24 from '../../assets/Adrishya/img24.jpg'
 import img25 from '../../assets/Adrishya/img25.jpg'
+import img26 from '../../assets/Adrishya/img26.jpg'
+import img27 from '../../assets/Adrishya/img27.jpg'
+import img28 from '../../assets/Adrishya/img28.jpg'
+import img29 from '../../assets/Adrishya/img29.jpg'
 
 import i1 from '../../assets/GurukulamPhotos/i1.png'
 import i2 from '../../assets/GurukulamPhotos/i2.png'
@@ -80,7 +84,7 @@ const gurukulamImages = [
 const ADRISHYA_IMAGES = [
   img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, 
   img12,img13,img14,img15,img16,img17,img18,img19,
-img20,img21,img22,img23,img24,img25,
+img20,img21,img22,img23,img24,img25,img26,img27,img28,img29,
 ]
 
 const PREVIEW_COUNT = 6; // 5 images + 1 "+N more" tile (old behavior)

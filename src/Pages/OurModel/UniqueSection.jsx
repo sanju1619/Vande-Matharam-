@@ -28,7 +28,19 @@ const UniqueFeaturesSection = () => {
       years: "2 years",
       experience:
         "By involving myself in volunteering activities with Vandematram Gurukulam, I not only give service but also receive spiritual and cultural growth, while developing interest in subjects like Math and learning through discipline and values."
-    }
+    },
+    {
+      name: "Nithish R",
+      city: "Shivamogga ",
+      years: "3 years",
+      experience:"I just started to do seva with Vande mataram gurukulam from past 3years, and also i did one year seva as a full timer in Vande Mataram Gurukulam. It was a great opportunity to me. When i joined with Vande Mataram Gurukulam team, first i learned Discipline which is important thing in our life. And also i participated in Viveka Bharatha programmes and Vidyavarna Painting Events etc.. it was really wonderfull experience in my life"
+    },
+    {
+      name: "Bhavani K G",
+      city: "Bangalore ",
+      years: "4 years",
+      experience:'Volunteering at Vandemataram Gurukula was a meaningful experience. I helped in small ways during the early days with planning, fundraising, and managing social media. I also joined in events and activities, which gave me good exposure and helped me learn and grow.'
+        },
   ];
 
   return (
