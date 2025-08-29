@@ -27,6 +27,10 @@ import sc1 from '../../assets/GurukulaActivities/sc1.JPG'
 import sc2 from '../../assets/GurukulaActivities/sc2.JPG'
 import sc3 from '../../assets/GurukulaActivities/sc3.png'
 import sc4 from '../../assets/GurukulaActivities/sc4.png'
+
+// ✅ Directly import volunteer image
+import volunteerImage from '../../../public/volunteerimage/IMG_8885.jpg';
+
 const sliderSettings = {
   dots: false,
   infinite: true,
@@ -42,34 +46,12 @@ const sliderSettings = {
   ]
 };
 
-const sliderVolunteerSettings = {
-  dots: false,
-  infinite: true,
-  speed: 1000,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2500,
-  arrows: false,
-  pauseOnHover: true,
-  responsive: [
-    { breakpoint: 1024, settings: { slidesToShow: 2 } },
-    { breakpoint: 640, settings: { slidesToShow: 1 } }
-  ]
-};
-
 const galleryPhotos = [
   adrishya1,
   'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2070',
   'https://images.unsplash.com/photo-1542810634-71277d952594?q=80&w=2070',
   'https://images.unsplash.com/photo-1618477388954-7852f32655ec?q=80&w=1964',
   'https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=2070',
-];
-
-const volunteerPhotos = [
-  'https://images.unsplash.com/photo-1578496469375-77a8d56a29b3?q=80&w=2070',
-  'https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070',
-  'https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=1887',
 ];
 
 const AdrishyaSection = () => {
@@ -164,17 +146,11 @@ const AdrishyaSection = () => {
           Join as a Volunteer
         </h2>
         <div className="mb-10">
-          <Slider {...sliderVolunteerSettings}>
-            {volunteerPhotos.map((photo, index) => (
-              <div key={index} className="px-3">
-                <img
-                  src={photo}
-                  alt={`Volunteer group ${index + 1}`}
-                  className="w-full h-64 sm:h-72 object-cover rounded-xl shadow-md"
-                />
-              </div>
-            ))}
-          </Slider>
+          <img
+            src={volunteerImage}   // ✅ Single imported image
+            alt="Volunteer group"
+            className="w-full h-64 sm:h-72 object-cover rounded-xl shadow-md"
+          />
         </div>
         <form className="max-w-2xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">

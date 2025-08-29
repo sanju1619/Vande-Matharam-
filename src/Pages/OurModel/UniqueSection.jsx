@@ -13,6 +13,24 @@ const UniqueFeaturesSection = () => {
     'Blending Gurukula wisdom with modern academia',
   ];
 
+  // ✅ Only 2 volunteers (from your table)
+  const volunteerExperiences = [
+    {
+      name: "Manju C",
+      city: "Hubballi",
+      years: "3 years",
+      experience:
+        "Participating in the Vidyavarna project was a life-changing experience. Seeing schools transform through art that carries meaningful messages showed me the power of creative service."
+    },
+    {
+      name: "Pavan G",
+      city: "Vijayapur",
+      years: "2 years",
+      experience:
+        "By involving myself in volunteering activities with Vandematram Gurukulam, I not only give service but also receive spiritual and cultural growth, while developing interest in subjects like Math and learning through discipline and values."
+    }
+  ];
+
   return (
     <div>
       {/* Features Section */}
@@ -30,9 +48,7 @@ const UniqueFeaturesSection = () => {
             {uniqueFeatures.map((feature, index) => (
               <div key={index} className="flex items-start">
                 <span className="text-yellow-500 mr-3 mt-1">&#9679;</span>
-                <p className="text-lg text-gray-700 leading-8">
-                  {feature}
-                </p>
+                <p className="text-lg text-gray-700 leading-8">{feature}</p>
               </div>
             ))}
           </div>
@@ -51,50 +67,23 @@ const UniqueFeaturesSection = () => {
             </p>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {/* Testimonial 1 */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <p className="text-gray-700 italic leading-8">
-                "Teaching at the Gurukulam transformed my perspective on education. The children's dedication to both academics and traditional values is truly inspiring."
-              </p>
-              <div className="mt-6 text-right">
-                <p className="font-semibold text-gray-900">— Rajesh K.</p>
-                <p className="text-sm text-gray-500">Volunteer Teacher, 2 years</p>
+          <div className="grid gap-8 sm:grid-cols-2">
+            {volunteerExperiences.map((volunteer, index) => (
+              <div
+                key={index}
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+              >
+                <p className="text-gray-700 italic leading-8">
+                  "{volunteer.experience}"
+                </p>
+                <div className="mt-6 text-right">
+                  <p className="font-semibold text-gray-900">— {volunteer.name}</p>
+                  <p className="text-sm text-gray-500">
+                    {volunteer.city}, Volunteer {volunteer.years}
+                  </p>
+                </div>
               </div>
-            </div>
-
-            {/* Testimonial 2 */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <p className="text-gray-700 italic leading-8">
-                "Participating in the Vidyavarna project was a life-changing experience. Seeing schools transform through art that carries meaningful messages showed me the power of creative service."
-              </p>
-              <div className="mt-6 text-right">
-                <p className="font-semibold text-gray-900">— Priya M.</p>
-                <p className="text-sm text-gray-500">Art Volunteer, Adrishya</p>
-              </div>
-            </div>
-
-            {/* Testimonial 3 */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <p className="text-gray-700 italic leading-8">
-                "The Kanyakumari Yatra organized by Adrishya wasn't just a journey across India, but a journey within. The discipline, patriotism, and camaraderie we developed will stay with me forever."
-              </p>
-              <div className="mt-6 text-right">
-                <p className="font-semibold text-gray-900">— Arjun S.</p>
-                <p className="text-sm text-gray-500">Youth Volunteer</p>
-              </div>
-            </div>
-
-            {/* Testimonial 4 */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow sm:col-span-2 lg:col-span-1">
-              <p className="text-gray-700 italic leading-8">
-                "Working with children at the Gurukulam taught me more than I taught them. Their curiosity, resilience, and joy in simple living are lessons I carry into my professional life."
-              </p>
-              <div className="mt-6 text-right">
-                <p className="font-semibold text-gray-900">— Meera N.</p>
-                <p className="text-sm text-gray-500">Corporate Volunteer</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
