@@ -27,6 +27,7 @@ import sc1 from '../../assets/GurukulaActivities/sc1.JPG'
 import sc2 from '../../assets/GurukulaActivities/sc2.JPG'
 import sc3 from '../../assets/GurukulaActivities/sc3.png'
 import sc4 from '../../assets/GurukulaActivities/sc4.png'
+import sc5 from '../../assets/GurukulaActivities/sc5.png'
 
 // ✅ Directly import volunteer image
 import volunteerImage from '../../../public/volunteerimage/IMG_8885.jpg';
@@ -58,7 +59,7 @@ const AdrishyaSection = () => {
   const activitiesData = [
     { title: 'Vidyavarna Painting', description: 'Transformed 75+ government schools and ashramas with vibrant, educational, and value-based wall art that inspires learning and patriotism.', image: [vv1, vv2, vv3, vv4, vv6] },
     { title: 'Cultural Activities', description: 'Conducted 150+ cultural programs across Karnataka like Vande Bharata Mataram, Viveka Bharatha, and Kargil Vijay Diwas to instill national pride.', image: [cl1, cl2,cl3] },
-    { title: 'Social Awareness', description: 'Organized impactful drives like Vastra Daan, eco-brick making, and patriotic frame crafting using recycled materials.', image: [sc1,sc2,sc3,sc4] },
+    { title: 'Social Awareness', description: 'Organized impactful drives like Vastra Daan, eco-brick making, and patriotic frame crafting using recycled materials.', image: [sc1,sc2,sc3,sc4,sc5] },
     { title: 'Workshops & Sessions', description: '500+ sessions on values, leadership, and culture to awaken young minds and build confident, conscious citizens.', image: [work1,work1] },
     { title: 'Environment', description: 'Initiatives like seed ball drives, goshala and lake cleaning, and bird water stations to nurture eco-consciousness.', image: [en1,en1] },
   ];
