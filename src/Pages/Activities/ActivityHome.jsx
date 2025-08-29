@@ -63,7 +63,7 @@ const ActivityPage = () => {
                   activeTab === 'gurukula' ? 'bg-white text-gray-800 shadow' : 'bg-transparent text-gray-500'
                 }`}
               >
-                Gurukula
+                Gurukulam
               </button>
               <button
                 onClick={() => setActiveTab('adrishya')}
