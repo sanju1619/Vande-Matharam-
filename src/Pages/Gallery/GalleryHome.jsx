@@ -27,15 +27,52 @@ import img23 from '../../assets/Adrishya/img23.jpeg'
 import img24 from '../../assets/Adrishya/img24.jpg'
 import img25 from '../../assets/Adrishya/img25.jpg'
 
+import i1 from '../../assets/GurukulamPhotos/i1.png'
+import i2 from '../../assets/GurukulamPhotos/i2.png'
+import i3 from '../../assets/GurukulamPhotos/i3.png'
+import i4 from '../../assets/GurukulamPhotos/i4.png'
+import i5 from '../../assets/GurukulamPhotos/i5.png'
+import i6 from '../../assets/GurukulamPhotos/i6.png'
+import i7 from '../../assets/GurukulamPhotos/i7.png'
+import i8 from '../../assets/GurukulamPhotos/i8.png'
+import i9 from '../../assets/GurukulamPhotos/i9.png'
+import i10 from '../../assets/GurukulamPhotos/i10.png'
+import i11 from '../../assets/GurukulamPhotos/i11.png'
+import i12 from '../../assets/GurukulamPhotos/i12.png'
+import i13 from '../../assets/GurukulamPhotos/i13.png'
+import i14 from '../../assets/GurukulamPhotos/i14.png'
+import i15 from '../../assets/GurukulamPhotos/i15.png'
+import i16 from '../../assets/GurukulamPhotos/i16.png'
+import i17 from '../../assets/GurukulamPhotos/i17.png'
+import i18 from '../../assets/GurukulamPhotos/i18.png'
+import i19 from '../../assets/GurukulamPhotos/i19.png'
+import i20 from '../../assets/GurukulamPhotos/i20.png'
+import i21 from '../../assets/GurukulamPhotos/i21.png'
+
 
 // -------------------- Gurukula (kept from NEW) --------------------
 const gurukulamImages = [
-  { url: 'https://images.unsplash.com/photo-1542810634-71277d952594?q=80&w=2070', date: '2024-07-10' },
-  { url: 'https://images.unsplash.com/photo-1542810634-71277d952594?q=80&w=2070', date: '2024-06-15' },
-  { url: 'https://images.unsplash.com/photo-1618477388954-7852f32655ec?q=80&w=1964', date: '2024-08-05' },
-  { url: 'https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=2070', date: '2024-05-25' },
-  { url: 'https://images.unsplash.com/photo-1528194427355-b772a01095b3?q=80&w=2070', date: '2024-09-01' },
-  { url: 'https://images.unsplash.com/photo-1605807642769-906d649339a9?q=80&w=2070', date: '2024-07-22' },
+  { url: i1, date: '2024-07-10' },
+  { url: i2, date: '2024-06-15' },
+  { url: i3, date: '2024-08-05' },
+  { url: i4, date: '2024-05-25' },
+  { url: i5, date: '2024-05-25' },
+  { url: i6, date: '2024-05-25' },
+  { url: i7, date: '2024-05-25' },
+  { url: i8, date: '2024-05-25' },
+  { url: i9, date: '2024-05-25' },
+  { url: i10, date: '2024-05-25' },
+  { url: i11, date: '2024-05-25' },
+  { url: i12, date: '2024-05-25' },
+  { url: i13, date: '2024-05-25' },
+  { url: i14, date: '2024-05-25' },
+  { url: i15, date: '2024-05-25' },
+  { url: i16, date: '2024-05-25' },
+  { url: i17, date: '2024-05-25' },
+  { url: i18, date: '2024-05-25' },
+  { url: i19, date: '2024-05-25' },
+  { url: i20, date: '2024-05-25' },
+  { url: i21, date: '2024-05-25' },
 ];
 
 // -------------------- Adrishya (taken from OLD) --------------------
