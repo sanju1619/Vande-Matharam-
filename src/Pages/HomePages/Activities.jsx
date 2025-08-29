@@ -3,10 +3,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
-import yoga from '../../assets/images/yoga.jpg'
 import organic from '../../assets/activities/culture.jpg'
 import shlokas from '../../assets/activities/Mallaghamba.jpg'
 import community from '../../assets/activities/Football.jpg'
+import vv1 from '../../assets/photos/vidhyavarana5.jpg'
 // Import react-slick's css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -14,7 +14,7 @@ import "slick-carousel/slick/slick-theme.css";
 // --- DATA for the cards (no changes here) ---
 const activitiesData = [
   {
-    image: yoga,
+    image: vv1,
     title: 'Vidya Varna Painting',
     description: 'Transforming schools with vibrant, educational murals that inspire learning and patriotism.',
     
