@@ -7,12 +7,6 @@ import Slider from "react-slick";
 // --- IMAGE & LOGO PLACEHOLDERS ---
 import adrishyaLogo from '../../assets/adrishiyalogo/AdrishyaLogo.png';
 import adrishya1 from '../../assets/images/adrishiya1.jpg';
-import journeyImage from '../../assets/images/img1.jpg';
-import vidyavarnaImage from '../../assets/images/img1.jpg';
-import culturalImage from '../../assets/images/img1.jpg';
-import workshopImage from '../../assets/images/img1.jpg';
-import environmentImage from '../../assets/images/img1.jpg';
-import socialImage from '../../assets/images/img1.jpg';
 import vv1 from '../../assets/GurukulaActivities/vv1.jpg'
 import vv2 from '../../assets/GurukulaActivities/vv2.png'
 import vv3 from '../../assets/GurukulaActivities/vv3.JPG'
@@ -22,7 +16,14 @@ import cl1 from '../../assets/GurukulaActivities/cl1.JPG'
 import cl2 from '../../assets/GurukulaActivities/cl2.JPG'
 import cl3 from '../../assets/Slide6/Kargil/kargil.png'
 import work1 from '../../assets/GurukulaActivities/work1.JPG'
-import en1 from '../../assets/GurukulaActivities/en1.JPG'
+import work2 from '../../assets/GurukulaActivities/work2.png'
+import work3 from '../../assets/GurukulaActivities/work3.png'
+import work4 from '../../assets/GurukulaActivities/work4.png'
+import work5 from '../../assets/GurukulaActivities/work5.png'
+import work6 from '../../assets/GurukulaActivities/work6.png'
+import en1 from '../../assets/GurukulaActivities/en2.JPG'
+import en3 from '../../assets/GurukulaActivities/en3.JPG'
+import en4 from '../../assets/GurukulaActivities/en4.JPG'
 import sc1 from '../../assets/GurukulaActivities/sc1.JPG'
 import sc2 from '../../assets/GurukulaActivities/sc2.JPG'
 import sc3 from '../../assets/GurukulaActivities/sc3.png'
@@ -60,8 +61,8 @@ const AdrishyaSection = () => {
     { title: 'Vidyavarna Painting', description: 'Transformed 75+ government schools and ashramas with vibrant, educational, and value-based wall art that inspires learning and patriotism.', image: [vv1, vv2, vv3, vv4, vv6] },
     { title: 'Cultural Activities', description: 'Conducted 150+ cultural programs across Karnataka like Vande Bharata Mataram, Viveka Bharatha, and Kargil Vijay Diwas to instill national pride.', image: [cl1, cl2,cl3] },
     { title: 'Social Awareness', description: 'Organized impactful drives like Vastra Daan, eco-brick making, and patriotic frame crafting using recycled materials.', image: [sc1,sc2,sc3,sc4,sc5] },
-    { title: 'Workshops & Sessions', description: '500+ sessions on values, leadership, and culture to awaken young minds and build confident, conscious citizens.', image: [work1,work1] },
-    { title: 'Environment', description: 'Initiatives like seed ball drives, goshala and lake cleaning, and bird water stations to nurture eco-consciousness.', image: [en1,en1] },
+    { title: 'Workshops & Sessions', description: '500+ sessions on values, leadership, and culture to awaken young minds and build confident, conscious citizens.', image: [work1,work2,work3,work4,work5,work6] },
+    { title: 'Environment', description: 'Initiatives like seed ball drives, goshala and lake cleaning, and bird water stations to nurture eco-consciousness.', image: [en1,en3,en4] },
   ];
 
   const [selectedActivity, setSelectedActivity] = useState(null);
