@@ -2,9 +2,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import donate from '../assets/images/donate.png'
-import teacher from '../assets/images/teacher.png'
-import img1 from '../assets/images/img_2.jpg'
+
 // --- DATA for the footer ---
 // This makes it easy to update content late
 

@@ -3,12 +3,10 @@
 import React from 'react';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
-import volunter from '../../assets/images/volunter.jpg'
 import volu from '../../assets/images/volu.png'
 
 // IMPORTANT: Updated image URL to something that looks better as a vertical image
 // If your image is horizontal, it will still work but might look less balanced.
-const volunteerImageUrl = volunter;
 
 
 const VolunteerSection = () => {

@@ -4,8 +4,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ActivitiesSection from './Activities';
 import AboutSection from './AboutSection';
-import PillarsSection from './PillerSection';
-import StorySection from './StorySection';
+import PillarsSection from './PillerSection'
 import NewsSection from './NewsSection';
 import VolunteerSection from './VolunterSection';
 
@@ -67,7 +66,7 @@ const HomePage = () => {
       <AboutSection />
       <ActivitiesSection />
       <PillarsSection />
-      <StorySection />
+ 
       <NewsSection />
       <VolunteerSection />
 
