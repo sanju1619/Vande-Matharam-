@@ -1,18 +1,15 @@
 // src/pages/ContactPage.jsx
 import React from 'react';
-
-// --- IMAGE PLACEHOLDER ---
-// You should replace this with an image relevant to contacting you, like your location or team.
 import heroImage from '../../assets/images/img_2.jpg'; 
 import ContactFormSection from './ContactForm';
 import ContactDetailsSection from './Details';
 
 const ContactPage = () => {
   return (
-    <>
-      {/* Main Hero Section for the Contact Page */}
+    <div className="overflow-x-hidden"> {/* Prevent horizontal scroll */}
+      {/* Hero Section */}
       <div
-        className="relative h-screen bg-cover bg-center flex items-center justify-center text-center"
+        className="relative min-h-[80vh] bg-cover bg-center flex items-center justify-center text-center"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -26,11 +23,12 @@ const ContactPage = () => {
         </main>
       </div>
 
-      {/* The rest of your contact page content will go here */}
-      {/* For example: Contact form, map, address, and contact details */}
-<ContactFormSection/>
-<ContactDetailsSection/>
-    </>
+      {/* Contact form and map sections */}
+      <section className="relative z-10 bg-white">
+        <ContactFormSection />
+        <ContactDetailsSection />
+      </section>
+    </div>
   );
 };
 

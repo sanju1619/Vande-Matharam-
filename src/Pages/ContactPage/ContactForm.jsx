@@ -13,17 +13,14 @@ L.Icon.Default.mergeOptions({
 });
 
 const ContactFormSection = () => {
-  // TODO: Replace with exact coords for the Google Maps place if you have them
-const position = [15.6361, 74.5049]; // Thimmapur-M-Tadakod, Karnataka
-
+  const position = [15.6361, 74.5049]; // Thimmapur-M-Tadakod, Karnataka
   const mapsUrl = "https://maps.app.goo.gl/v1HWcK2NWuwTZUJM9";
   const addressText = "Thimmapur-M-Tadakod, Khanapur-M-Tadakod, Karnataka 581105";
 
   return (
-    <section className="bg-white py-20 font-sans">
+    <section className="bg-white py-20 font-sans overflow-x-hidden">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-          
           {/* Left Column: Contact Form */}
           <div className="w-full">
             <h2 className="text-2xl font-bold text-gray-800 font-heading mb-6">
@@ -31,38 +28,38 @@ const position = [15.6361, 74.5049]; // Thimmapur-M-Tadakod, Karnataka
             </h2>
             <form action="#" method="POST">
               <div className="space-y-5">
-                <input 
-                  type="text" 
-                  name="name" 
-                  id="name" 
-                  placeholder="Your Name" 
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Your Name"
                   className="w-full p-4 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500"
                 />
-                <input 
-                  type="email" 
-                  name="email" 
-                  id="email" 
-                  placeholder="Your Email" 
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Your Email"
                   className="w-full p-4 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500"
                 />
-                <input 
-                  type="text" 
-                  name="subject" 
-                  id="subject" 
-                  placeholder="Subject" 
+                <input
+                  type="text"
+                  name="subject"
+                  id="subject"
+                  placeholder="Subject"
                   className="w-full p-4 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500"
                 />
-                <textarea 
-                  name="message" 
-                  id="message" 
-                  rows="6" 
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="6"
                   placeholder="Message"
                   className="w-full p-4 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500"
                 ></textarea>
               </div>
               <div className="mt-6">
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="w-full md:w-auto bg-yellow-400 text-gray-800 font-bold py-3 px-8 rounded-md hover:bg-yellow-500 transition duration-300"
                 >
                   SEND MESSAGE
@@ -71,43 +68,43 @@ const position = [15.6361, 74.5049]; // Thimmapur-M-Tadakod, Karnataka
             </form>
           </div>
 
-          {/* Right Column: Map */}
-          <div className="w-full h-full min-h-[500px] flex flex-col justify-between">
-              <MapContainer 
-    center={position} 
-    zoom={15} 
-    style={{ height: "100%", width: "100%", borderRadius: "0.5rem" }}
-    className="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
-  >
-    <TileLayer
-      attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-    />
-    <Marker position={position}>
-      <Popup>
-        <div className="space-y-1">
-          <div className="font-semibold">VM Gurukulam</div>
-          <div className="text-sm">
-            Thimmapur-M-Tadakod, Khanapur-M-Tadakod, Karnataka 581105
-          </div>
-          <a
-            href="https://maps.app.goo.gl/v1HWcK2NWuwTZUJM9"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-yellow-600 underline text-sm"
-          >
-            Open in Google Maps
-          </a>
-        </div>
-      </Popup>
-    </Marker>
-  </MapContainer>
+          {/* Right Column: Map and Contact Info */}
+          <div className="w-full min-h-[500px] flex flex-col justify-between overflow-hidden">
+            <div className="w-full h-[400px] rounded-md overflow-hidden">
+              <MapContainer
+                center={position}
+                zoom={15}
+                style={{ height: "100%", width: "100%" }}
+              >
+                <TileLayer
+                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+                <Marker position={position}>
+                  <Popup>
+                    <div className="space-y-1">
+                      <div className="font-semibold">VM Gurukulam</div>
+                      <div className="text-sm">
+                        Thimmapur-M-Tadakod, Khanapur-M-Tadakod, Karnataka 581105
+                      </div>
+                      <a
+                        href={mapsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-yellow-600 underline text-sm"
+                      >
+                        Open in Google Maps
+                      </a>
+                    </div>
+                  </Popup>
+                </Marker>
+              </MapContainer>
+            </div>
 
-            {/* Contact details below map */}
-            <div className="mt-6 text-gray-600">
+            {/* Contact Details */}
+            <div className="mt-6 text-gray-600 text-sm leading-relaxed">
               <p>
-                <span className="font-bold">Address:</span>{" "}
-                {addressText} •{" "}
+                <span className="font-bold">Address:</span> {addressText} •{" "}
                 <a
                   href={mapsUrl}
                   target="_blank"
@@ -117,7 +114,12 @@ const position = [15.6361, 74.5049]; // Thimmapur-M-Tadakod, Karnataka
                   Open in Google Maps
                 </a>
               </p>
-              <p><span className="font-bold">Email:</span> contact@vmgurukulam.org</p>
+              <p>
+                <span className="font-bold">Email:</span>{" "}
+                <a href="mailto:contact@vmgurukulam.org" className="text-yellow-600 underline">
+                  contact@vmgurukulam.org
+                </a>
+              </p>
             </div>
           </div>
         </div>
