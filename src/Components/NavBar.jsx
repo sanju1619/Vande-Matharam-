@@ -65,7 +65,7 @@ const Navbar = () => {
               <span
                 className={`text-lg sm:text-xl md:text-2xl font-bold transition-colors duration-300 ${textColorClass}`}
               >
-                VANDE MATHARAM GURUKULAM
+                VANDE MATARAM GURUKULAM
               </span>
             </NavLink>
           </div>
