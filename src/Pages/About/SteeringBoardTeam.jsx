@@ -30,7 +30,7 @@ const SteeringBoardSection = () => {
     <section className="bg-yellow-400 py-20 font-sans">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-white font-heading">
+          <h2 className="text-3xl font-bold text-gray-800 font-heading">
             Steering Board Members
           </h2>
         </div>
