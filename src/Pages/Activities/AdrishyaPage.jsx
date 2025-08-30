@@ -103,9 +103,7 @@ const AdrishyaSection = () => {
           alt="Adrishya Logo" 
           className="mx-auto w-48 sm:w-56 md:w-64 lg:w-72 h-auto drop-shadow-md"
         />
-        <h1 className="text-4xl md:text-5xl font-bold text-yellow-700 mt-6 text-shadow-md">
-          Adrishya - The Invisible Force of Change
-        </h1>
+        
       </div>
 
       {/* 2. Our Journey Section */}
