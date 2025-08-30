@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import heroImage from '../../assets/images/img_2.jpg';
 import img1 from '../../assets/Adrishya/img1.jpg'
@@ -53,8 +52,7 @@ import i19 from '../../assets/GurukulamPhotos/i19.png'
 import i20 from '../../assets/GurukulamPhotos/i20.png'
 import i21 from '../../assets/GurukulamPhotos/i21.png'
 
-
-// -------------------- Gurukula (kept from NEW) --------------------
+// -------------------- Gurukula --------------------
 const gurukulamImages = [
   { url: i1, date: '2024-07-10' },
   { url: i2, date: '2024-06-15' },
@@ -79,22 +77,21 @@ const gurukulamImages = [
   { url: i21, date: '2024-05-25' },
 ];
 
-// -------------------- Adrishya (taken from OLD) --------------------
-// NOTE: Files live in /public/Gallery photos/Adrishya/...
+// -------------------- Adrishya --------------------
 const ADRISHYA_IMAGES = [
-  img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, 
+  img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11,
   img12,img13,img14,img15,img16,img17,img18,img19,
-img20,img21,img22,img23,img24,img25,img26,img27,img28,img29,
+  img20,img21,img22,img23,img24,img25,img26,img27,img28,img29,
 ]
 
-const PREVIEW_COUNT = 6; // 5 images + 1 "+N more" tile (old behavior)
+const PREVIEW_COUNT = 6; // 5 images + "+N more" tile
 
 const GalleryPage = () => {
   const [activeTab, setActiveTab] = useState('gurukula');
   const [selectedImage, setSelectedImage] = useState(null);
   const [sortOrder, setSortOrder] = useState('newest');
 
-  // --- Adrishya collapse/expand (old behavior preserved) ---
+  // --- Adrishya collapse/expand ---
   const [adrishyaShowAll, setAdrishyaShowAll] = useState(false);
 
   const totalAdrishya = ADRISHYA_IMAGES.length;
@@ -105,8 +102,19 @@ const GalleryPage = () => {
   const adrishyaVisible = adrishyaShowAll ? ADRISHYA_IMAGES : previewAdrishya;
   const adrishyaRemaining = hasMoreAdrishya ? totalAdrishya - (PREVIEW_COUNT - 1) : 0;
 
+  // --- Gurukula collapse/expand ⭐ NEW ---
+  const [gurukulaShowAll, setGurukulaShowAll] = useState(false);
+  const PREVIEW_GURUKULA = 6;
+  const totalGurukula = gurukulamImages.length;
+  const hasMoreGurukula = totalGurukula > PREVIEW_GURUKULA;
+  const previewGurukula = hasMoreGurukula
+    ? gurukulamImages.slice(0, PREVIEW_GURUKULA - 1)
+    : gurukulamImages.slice(0, PREVIEW_GURUKULA);
+  const gurukulaVisible = gurukulaShowAll ? gurukulamImages : previewGurukula;
+  const gurukulaRemaining = hasMoreGurukula ? totalGurukula - (PREVIEW_GURUKULA - 1) : 0;
+
   // --- Sort Gurukula ---
-  const renderedGurukulaImages = [...gurukulamImages].sort((a, b) =>
+  const renderedGurukulaImages = [...gurukulaVisible].sort((a, b) =>
     sortOrder === 'newest'
       ? new Date(b.date) - new Date(a.date)
       : new Date(a.date) - new Date(b.date)
@@ -198,7 +206,20 @@ const GalleryPage = () => {
                 </button>
               ))}
 
-            {/* Adrishya Tab (old preview + "+N more" + collapse) */}
+            {/* "+N more" tile for Gurukula ⭐ */}
+            {activeTab === 'gurukula' && !gurukulaShowAll && hasMoreGurukula && (
+              <button
+                type="button"
+                onClick={() => setGurukulaShowAll(true)}
+                className="relative overflow-hidden rounded-2xl shadow-lg group bg-white border border-dashed border-gray-300 flex items-center justify-center"
+                style={{ minHeight: '20rem' }}
+                aria-label={`Show ${gurukulaRemaining} more images`}
+              >
+                <span className="text-2xl font-bold text-gray-700">+{gurukulaRemaining} more</span>
+              </button>
+            )}
+
+            {/* Adrishya Tab */}
             {activeTab === 'adrishya' &&
               adrishyaVisible.map((src, idx) => (
                 <button
@@ -220,7 +241,7 @@ const GalleryPage = () => {
                 </button>
               ))}
 
-            {/* "+N more" tile as the 6th card (preview mode only) */}
+            {/* "+N more" tile for Adrishya */}
             {activeTab === 'adrishya' && !adrishyaShowAll && hasMoreAdrishya && (
               <button
                 type="button"
@@ -236,7 +257,19 @@ const GalleryPage = () => {
         </div>
       </section>
 
-      {/* Floating Collapse button (only when Adrishya expanded) */}
+      {/* Floating Collapse button for Gurukula ⭐ */}
+      {activeTab === 'gurukula' && gurukulaShowAll && (
+        <button
+          type="button"
+          onClick={() => setGurukulaShowAll(false)}
+          className="fixed bottom-6 right-6 z-50 rounded-full bg-gray-900 text-white px-5 py-3 text-sm font-semibold shadow-lg hover:bg-black transition"
+          aria-label="Collapse Gurukula gallery"
+        >
+          Collapse
+        </button>
+      )}
+
+      {/* Floating Collapse button for Adrishya */}
       {activeTab === 'adrishya' && adrishyaShowAll && (
         <button
           type="button"
