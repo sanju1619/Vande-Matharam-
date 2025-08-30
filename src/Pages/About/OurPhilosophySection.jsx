@@ -2,7 +2,7 @@ import React from 'react';
 
 const OurPhilosophySection = () => {
   return (
-    <section className="bg-white py-16 sm:py-24">
+    <section className="bg-yellow-400 py-16 sm:py-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl">

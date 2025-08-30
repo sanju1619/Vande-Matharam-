@@ -27,7 +27,7 @@ const SteeringBoardSection = () => {
   ];
 
   return (
-    <section className="bg-white py-20 font-sans">
+    <section className="bg-yellow-400 py-20 font-sans">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-800 font-heading">
